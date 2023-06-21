@@ -4,6 +4,7 @@ import theme from './src/theme';
 import { Loading } from '@components/loading';
 import { ThemeProvider } from 'styled-components/native';
 import { StatusBar } from 'react-native';
+import Routes from '@routes/index';
 
 export default function App() {
 
@@ -17,7 +18,7 @@ export default function App() {
           backgroundColor={'transparent'}
           translucent
         />
-        {fontsLoad ? <Groups/> : <Loading/>}
+        {fontsLoad ? <Routes/> : <Loading/>}
       </>
     </ThemeProvider>
   );

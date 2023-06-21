@@ -1,15 +1,23 @@
-import { Header } from '@components/header';
+
 import * as S from './styles';
-import { Highlight } from '@components/highlight';
-import GroupCard from '@components/groupCard';
 import { useState } from 'react';
 import { FlatList } from 'react-native';
-import ListEmpty from '@components/listEmpty';
 import Button from '@components/button';
+import { Header } from '@components/header';
+import GroupCard from '@components/groupCard';
+import ListEmpty from '@components/listEmpty';
+import { Highlight } from '@components/highlight';
+import { useNavigation } from '@react-navigation/native'
 
 export default function Groups() {
 
   const [groups, setGroups] = useState<string[]>(['Galera da Rocket', 'Amigos']);
+
+  const navigation = useNavigation()
+
+  function handleNewGroup() {
+    navigation.navigate('new');
+  }
 
   return (
     <S.Container>
@@ -34,6 +42,7 @@ export default function Groups() {
 
       <Button 
         title='Criar nova turma'
+        onPress={handleNewGroup}
       />
       
      </S.Container>
