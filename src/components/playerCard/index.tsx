@@ -1,5 +1,9 @@
+import { 
+    Container,
+    Icon, 
+    Name 
+} from "./styles"
 import ButtonIcon from "@components/buttonIcon"
-import { Container, Icon, Name } from "./styles"
 
 type Props = {
     name: string;

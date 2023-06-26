@@ -1,5 +1,5 @@
-import { Container } from "@components/header/styles";
 import { Message } from "./styles";
+import { Container } from "@components/header/styles";
 
 type Props = {
     message: string;
